@@ -27,12 +27,14 @@ requirements:
     - r-htmltools >=0.3.5
     - r-htmlwidgets >=0.6
     - r-magrittr
+    - r-crosstalk
 
   run:
     - r-base
     - r-htmltools >=0.3.5
     - r-htmlwidgets >=0.6
     - r-magrittr
+    - r-crosstalk
 
 test:
   commands:
