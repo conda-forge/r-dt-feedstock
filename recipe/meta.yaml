@@ -1,4 +1,4 @@
-{% set version = '0.2' %}
+{% set version = "0.4" %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,7 +12,7 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/DT_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/DT/DT_{{ version }}.tar.gz
-  sha256: a1b7f9e5c31a241fdf78ac582499f346e915ff948554980bbc2262c924b806bd
+  sha256: 3daa96b819ca54e5fbc2c7d78cb3637982a2d44be58cea0683663b71cfc7fa19
 
 build:
   number: 0
@@ -27,12 +27,14 @@ requirements:
     - r-htmltools >=0.3.5
     - r-htmlwidgets >=0.6
     - r-magrittr
+    - r-crosstalk
 
   run:
     - r-base
     - r-htmltools >=0.3.5
     - r-htmlwidgets >=0.6
     - r-magrittr
+    - r-crosstalk
 
 test:
   commands:
