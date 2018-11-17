@@ -14,9 +14,9 @@ source:
   sha256: 3daa96b819ca54e5fbc2c7d78cb3637982a2d44be58cea0683663b71cfc7fa19
 
 build:
+  noarch: generic
   merge_build_host: True  # [win]
-  number: 1
-  skip: true  # [win32]
+  number: 1001
   rpaths:
     - lib/R/lib/
     - lib/
@@ -49,8 +49,7 @@ about:
     (typically via R Markdown or Shiny). The 'DataTables' library has been included
     in this R package. The package name 'DT' is an abbreviation of 'DataTables'.
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'  # [unix]
-  license_file: '{{ environ["PREFIX"] }}\R\share\licenses\GPL-3'  # [win]
+  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
 
 extra:
   recipe-maintainers:
