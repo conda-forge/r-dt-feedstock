@@ -1,4 +1,4 @@
-{% set version = '0.4' %}
+{% set version = '0.5' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -7,16 +7,15 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: DT_{{ version }}.tar.gz
   url:
     - {{ cran_mirror }}/src/contrib/DT_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/DT/DT_{{ version }}.tar.gz
-  sha256: 3daa96b819ca54e5fbc2c7d78cb3637982a2d44be58cea0683663b71cfc7fa19
+  sha256: 0e5bbb91b88a769e52ba079ebac266a25ea0f0a23bdf3deff31f51d2a81eade8
 
 build:
-  noarch: generic
   merge_build_host: True  # [win]
-  number: 1001
+  number: 0
+  noarch: generic
   rpaths:
     - lib/R/lib/
     - lib/
@@ -28,14 +27,16 @@ requirements:
     - r-base
     - r-crosstalk
     - r-htmltools >=0.3.6
-    - r-htmlwidgets >=1.0
+    - r-htmlwidgets >=1.3
     - r-magrittr
+    - r-promises
   run:
     - r-base
     - r-crosstalk
     - r-htmltools >=0.3.6
-    - r-htmlwidgets >=1.0
+    - r-htmlwidgets >=1.3
     - r-magrittr
+    - r-promises
 
 test:
   commands:
@@ -53,9 +54,25 @@ about:
 
 extra:
   recipe-maintainers:
-    - johanneskoester
-    - bgruening
-    - daler
-    - jdblischak
-    - cbrueffer
-    - dbast
+    - conda-forge/r
+
+# Package: DT
+# Type: Package
+# Title: A Wrapper of the JavaScript Library 'DataTables'
+# Version: 0.5
+# Authors@R: c( person("Yihui", "Xie", email = "xie@yihui.name", role = c("aut", "cre")), person("Joe", "Cheng", role = "aut"), person("Xianying", "Tan", role = "aut"), person("JJ", "Allaire", role = "ctb"), person("Maximilian", "Girlich", role = "ctb"), person("Greg", "Freedman Ellis", role = "ctb"), person("Johannes", "Rauh", role = "ctb"), person("jQuery contributors", role = c("ctb", "cph"), comment = "jQuery in htmlwidgets/lib"), person("SpryMedia Limited", role = c("ctb", "cph"), comment = "DataTables in htmlwidgets/lib"), person("Brian", "Reavis", role = c("ctb", "cph"), comment = "selectize.js in htmlwidgets/lib"), person("Leon", "Gersen", role = c("ctb", "cph"), comment = "noUiSlider in htmlwidgets/lib"), person("Bartek", "Szopka", role = c("ctb", "cph"), comment = "jquery.highlight.js in htmlwidgets/lib"), person("RStudio Inc", role = "cph") )
+# Maintainer: Yihui Xie <xie@yihui.name>
+# Description: Data objects in R can be rendered as HTML tables using the JavaScript library 'DataTables' (typically via R Markdown or Shiny). The 'DataTables' library has been included in this R package. The package name 'DT' is an abbreviation of 'DataTables'.
+# URL: https://rstudio.github.io/DT
+# BugReports: https://github.com/rstudio/DT/issues
+# License: GPL-3 | file LICENSE
+# Imports: htmltools (>= 0.3.6), htmlwidgets (>= 1.3), magrittr, crosstalk, promises
+# Suggests: jsonlite (>= 0.9.16), knitr (>= 1.8), rmarkdown, shiny (>= 0.12.1)
+# VignetteBuilder: knitr
+# RoxygenNote: 6.1.0
+# Encoding: UTF-8
+# NeedsCompilation: no
+# Packaged: 2018-11-05 20:21:03 UTC; yihui
+# Author: Yihui Xie [aut, cre], Joe Cheng [aut], Xianying Tan [aut], JJ Allaire [ctb], Maximilian Girlich [ctb], Greg Freedman Ellis [ctb], Johannes Rauh [ctb], jQuery contributors [ctb, cph] (jQuery in htmlwidgets/lib), SpryMedia Limited [ctb, cph] (DataTables in htmlwidgets/lib), Brian Reavis [ctb, cph] (selectize.js in htmlwidgets/lib), Leon Gersen [ctb, cph] (noUiSlider in htmlwidgets/lib), Bartek Szopka [ctb, cph] (jquery.highlight.js in htmlwidgets/lib), RStudio Inc [cph]
+# Repository: CRAN
+# Date/Publication: 2018-11-05 21:00:20 UTC
