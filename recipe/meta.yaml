@@ -1,4 +1,4 @@
-{% set version = '0.5' %}
+{% set version = "0.6" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/DT_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/DT/DT_{{ version }}.tar.gz
-  sha256: 0e5bbb91b88a769e52ba079ebac266a25ea0f0a23bdf3deff31f51d2a81eade8
+  sha256: 2ed68e9d161559171fa74b6105eee87b98acf755eae072b38ada60a83d427916
 
 build:
   merge_build_host: True  # [win]
