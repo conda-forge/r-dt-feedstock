@@ -1,4 +1,4 @@
-{% set version = "0.13" %}
+{% set version = "0.14" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/DT_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/DT/DT_{{ version }}.tar.gz
-  sha256: 79a073fe96980ce150d790ab76133c9e80bd463270c34d149c03934a622d63b5
+  sha256: 4bad6d17b06d989b85bf87c9d45cbbf76c8711c9e372ed78892a6bc50fb71176
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -48,8 +48,7 @@ test:
 about:
   home: https://rstudio.github.io/DT
   license: GPL-3
-  summary: Data objects in R can be rendered as HTML tables using the JavaScript library 'DataTables' (typically via R Markdown or Shiny). The 'DataTables' library
-    has been included in this R package. The package name 'DT' is an abbreviation of 'DataTables'.
+  summary: Data objects in R can be rendered as HTML tables using the JavaScript library 'DataTables' (typically via R Markdown or Shiny). The 'DataTables' library has been included in this R package. The package name 'DT' is an abbreviation of 'DataTables'.
   license_family: GPL3
   license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
