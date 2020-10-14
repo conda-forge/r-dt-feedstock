@@ -5,11 +5,9 @@ Home: https://rstudio.github.io/DT
 
 Package license: GPL-3
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-dt-feedstock/blob/master/LICENSE.txt)
 
 Summary: Data objects in R can be rendered as HTML tables using the JavaScript library 'DataTables' (typically via R Markdown or Shiny). The 'DataTables' library has been included in this R package. The package name 'DT' is an abbreviation of 'DataTables'.
-
-
 
 Current build status
 ====================
