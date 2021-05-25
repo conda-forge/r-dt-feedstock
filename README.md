@@ -3,7 +3,7 @@ About r-dt
 
 Home: https://rstudio.github.io/DT
 
-Package license: GPL-3
+Package license: GPL-3.0-only
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-dt-feedstock/blob/master/LICENSE.txt)
 
